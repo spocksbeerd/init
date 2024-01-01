@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'X or Wayland? (x/w)'
-read choice
+read -e choice
 
 if [ "$choice" = "x" ]; then
     curl https://raw.githubusercontent.com/spocksbeerd/dotfiles/main/.local/bin/configure/configure.sh > $HOME/installxsystem.sh
