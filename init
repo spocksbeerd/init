@@ -4,10 +4,7 @@ echo 'X or Wayland? (x/w)'
 read -e choice
 
 if [ "$choice" = "x" ]; then
-    curl https://raw.githubusercontent.com/spocksbeerd/dotfiles/main/.local/bin/configure/configure.sh > $HOME/installxsystem.sh
+    source <(curl -s https://raw.githubusercontent.com/spocksbeerd/dotfiles/main/.local/bin/configure/configure.sh)
 else
-    curl https://raw.githubusercontent.com/spocksbeerd/dotfiles-wayland/main/.local/bin/configure/configure.sh > $HOME/installwaylandsystem.sh
+    source <(curl -s https://raw.githubusercontent.com/spocksbeerd/dotfiles-wayland/main/.local/bin/configure/configure.sh)
 fi
-
-chmod +x $HOME/install*
-$HOME/install*
